@@ -1,0 +1,35 @@
+@import "../../../styles/mixin";
+
+.control-panel {
+  @include control-panel-layout;
+
+  .mat-card {
+    @include mat-card-layout;
+  }
+
+  .form-field {
+    margin-bottom: 2px;
+    min-width: 220px;
+    min-height: 80px;
+  }
+
+  .error-msg {
+    color: #ff5722;
+    padding-bottom: 20px;
+  }
+
+  @include xsm {
+    .form-field {
+      min-width: 300px;
+    }
+  }
+
+  @include sm {
+    .form-field {
+      min-width: 500px;
+    }
+  }
+}
+.content-container {
+  @include content-container-layout;
+}

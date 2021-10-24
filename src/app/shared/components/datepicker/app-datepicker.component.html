@@ -1,0 +1,8 @@
+﻿<mat-form-field class="input-full-width">
+  <input #inputCalendar matInput [matDatepicker]="dp" [id]="textInputModel?.inputName" [placeholder]="inputLabel" (keypress)="keyPress($event)" (dateChange)="dateChangeEvent($event)" [formControl]="datepickerControl" [(value)]="value" [min]="minDate" [max]="maxDate" [errorStateMatcher]="validate" (focus)="focusFunction()" [attr.aria-required]="setRequired()" [attr.aria-invalid]="formControl.invalid" [attr.aria-describedby]="errorInputId">
+  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp></mat-datepicker>
+  <mat-error>
+    <app-show-errors [control]="formControl" [inputLabel]="errorInputLabel" [inputId]="errorInputId"></app-show-errors>
+  </mat-error>
+</mat-form-field>

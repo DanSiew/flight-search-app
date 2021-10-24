@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ul class="flight-details-list">
+      <li *ngFor="let item of flightDetailsList" class="item-container">
+        <div class="badge"><img src="{{item.airlineLogoAddress}}" width="30" height="30" #img></div>
+        <div class="item-text">
+          <div class="name">{{airlineName}}: {{item.airlineName}}</div>
+          <div class="name">{{outboundFlightsDuration}}: {{item.outboundFlightsDuration}}</div>
+          <div class="name">{{inboundFlightsDuration}}: {{item.inboundFlightsDuration}}</div>
+          <div class="name">{{totalAmount}}: {{item.totalAmount}}</div>
+        </div>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

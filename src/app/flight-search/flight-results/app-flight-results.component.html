@@ -1,0 +1,17 @@
+<div class="control-panel">
+  <div *ngIf="loaded$ | async as loaded">
+    <div class="list-container">
+      <app-flight-details-list [flightDetailsList]="flightResult?.depFlightDetails" [departureCode]="flightResult?.departureCode" [title]="flightResult?.departureTitle">
+      </app-flight-details-list>
+    </div>
+  </div>
+  <div *ngIf="loaded$ | async as loaded">
+    <div class="list-container">
+      <app-flight-details-list [flightDetailsList]="flightResult?.retFlightDetails" [departureCode]="flightResult?.returnCode" [title]="flightResult?.returnTitle">
+      </app-flight-details-list>
+    </div>
+  </div>
+</div>
+<div class="button-container">
+  <button mat-raised-button color="accent" type="button" (click)="back($event)" matTooltip="Reset">{{buttonSearch}}</button>
+</div>

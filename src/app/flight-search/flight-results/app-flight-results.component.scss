@@ -1,0 +1,14 @@
+@import "../../../styles/mixin";
+
+.control-panel {
+  @include content-container-row-layout;
+  @include md {
+    display: flex;
+    flex-flow: row;
+  }
+}
+
+.button-container {
+  display: block;
+  padding: 10px;
+}

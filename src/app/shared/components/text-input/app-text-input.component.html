@@ -1,0 +1,6 @@
+﻿<mat-form-field class="input-full-width">
+  <input matInput [id]="textInputModel?.inputName" [placeholder]="inputLabel" [readonly]="readonly" [(ngModel)]="value" [errorStateMatcher]="validate" [attr.aria-required]="setRequired()" [attr.aria-invalid]="formControl.invalid" [attr.aria-describedby]="errorInputId" autofocus>
+  <mat-error>
+    <app-show-errors [control]="formControl" [inputLabel]="errorInputLabel" [inputId]="errorInputId"></app-show-errors>
+  </mat-error>
+</mat-form-field>

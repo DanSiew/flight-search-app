@@ -1,0 +1,9 @@
+@import "../../../styles/mixin";
+
+.flight-details-list {
+  @include item-list;
+}
+
+.mat-card {
+  @include mat-card-layout;
+}
